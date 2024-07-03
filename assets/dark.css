@@ -249,6 +249,25 @@ textarea {
   vertical-align: top;
 }
 
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #ccc;
+}
+
+.shuffle {
+  white-space: pre-line;
+}
+
 /**
   * Code and syntax highlighting
   */
