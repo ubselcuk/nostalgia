@@ -29,13 +29,40 @@
                     <img data-src="https://media.ubselcuk.com/ciwiq.jpeg" alt="Ciwiq 1" loading="lazy">
                     <div class="loader"></div>
                 </div>
+                <div class="image-container">
+                    <img data-src="https://media.ubselcuk.com/ciwiq.jpeg" alt="Ciwiq 1" loading="lazy">
+                    <div class="loader"></div>
+                </div>
+                <div class="image-container">
+                    <img data-src="https://media.ubselcuk.com/ciwiq.jpeg" alt="Ciwiq 1" loading="lazy">
+                    <div class="loader"></div>
+                </div>
+                <div class="image-container">
+                    <img data-src="https://media.ubselcuk.com/ciwiq.jpeg" alt="Ciwiq 1" loading="lazy">
+                    <div class="loader"></div>
+                </div>
             </div>
             <br />
         </main>
         <div id="footer" include-html="/sections/footer/footer.html"></div>
     </div>
     <script src="/javascript/index.js"></script>
-    <script src="/javascript/lazyload.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = document.querySelectorAll('img[data-src]');
+            lazyImages.forEach(function (img) {
+                img.onload = function () {
+                    img.removeAttribute('data-src');
+                    img.style.opacity = 1; // Resmi görünür yap
+                    var loader = img.nextElementSibling; // Yükleme göstergesi elementini al
+                    if (loader && loader.classList.contains('loader')) {
+                        loader.style.display = 'none'; // Yükleme göstergesini gizle
+                    }
+                };
+                img.src = img.dataset.src; // Gerçek resmi yükle
+            });
+        });
+    </script>
 </body>
 
 </html>
