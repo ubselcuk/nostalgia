@@ -596,6 +596,7 @@ pre {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Kolonları otomatik olarak ayarla */
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px; /* Resimler arasındaki boşluk */
 }
 
@@ -611,8 +612,8 @@ pre {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100;
-  height: 100;
+  width: 100%;
+  height: 100%;
   object-fit: cover; /* Resmi container'a sığacak şekilde kırp */
   transition: opacity 1s ease;
   opacity: 0; /* Resim yüklenene kadar görünmez yap */
