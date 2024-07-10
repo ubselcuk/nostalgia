@@ -613,8 +613,8 @@ pre {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Resmi container'a sığacak şekilde kırp */
-  transition: opacity 0.3s ease;
+  object-fit: none; /* Resmi container'a sığacak şekilde kırp */
+  transition: opacity 1s ease;
   opacity: 0; /* Resim yüklenene kadar görünmez yap */
 }
 
