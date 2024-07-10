@@ -593,22 +593,16 @@ pre {
 
 /* Literal.Number.Integer.Long */
 
-
 .gallery {
-  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 img {
-  width: 100%;
-  height: auto;
+  height: 100px;
+  width: 100px;
+  max-width: 100px;
+  max-height: 100px;
   object-fit: cover;
 }
 
-img.four-grid-cells {
-  -ms-grid-row-span: 2;
-  -ms-grid-column-span: 2;
-}
